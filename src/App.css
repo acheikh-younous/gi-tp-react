@@ -1,0 +1,354 @@
+/* TP 03 : Styles de la page React */
+:root {
+  --bleu-fonce: #123c63;
+  --bleu: #237fdb;
+  --texte: #19304d;
+  --gris: #607185;
+}
+
+.conteneur {
+  width: min(1140px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* 1. En-tete et navigation */
+.entete {
+  background: var(--bleu-fonce);
+  color: #fff;
+}
+
+.entete-interieur {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 17px 0;
+}
+
+.marque {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: white;
+  text-decoration: none;
+}
+
+.marque-icone {
+  width: 41px;
+  height: 41px;
+  filter: brightness(0) invert(1);
+}
+
+.marque strong {
+  display: block;
+  font-size: 27px;
+  letter-spacing: 1px;
+}
+
+.marque small {
+  display: block;
+  font-size: 11px;
+  color: #d3e4f3;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.navigation a:hover, .navigation a:focus-visible {
+  color: #91dbff;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* 2. Banniere avec photo et filtre */
+.banniere {
+  position: relative;
+  min-height: 355px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  background: #123c63;
+}
+
+.banniere-photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.banniere-filtre {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(13,45,78,.96) 0%, rgba(13,45,78,.87) 45%, rgba(13,45,78,.06) 100%);
+}
+
+.banniere-contenu {
+  position: relative;
+  z-index: 1;
+  padding: 54px 0;
+}
+
+.surtitre {
+  color: #a8dfff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.banniere h1 {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.12;
+  max-width: 590px;
+  margin: 10px 0 17px;
+}
+
+.banniere-contenu > p:not(.surtitre) {
+  max-width: 535px;
+  line-height: 1.65;
+  color: #e4eef8;
+}
+
+.bouton-principal {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 12px;
+  padding: 13px 18px;
+  border-radius: 8px;
+  background: var(--bleu);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bouton-principal:hover {
+  background: #0761b9;
+}
+
+.bouton-principal img {
+  width: 18px;
+  filter: brightness(0) invert(1);
+}
+
+/* 3. Cartes et images */
+.section-formations {
+  padding: 51px 0 57px;
+}
+
+.titre-section {
+  text-align: center;
+  margin-bottom: 31px;
+}
+
+.titre-section h2 {
+  font-size: 30px;
+  color: var(--bleu-fonce);
+  margin: 0 0 8px;
+}
+
+.titre-section p {
+  color: var(--gris);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.grille-formations {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.carte-formation {
+  background: white;
+  border: 1px solid #e1e9f0;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 20px rgba(21,56,89,.06);
+  min-width: 0;
+}
+
+.formation-entete {
+  min-height: 136px;
+}
+
+.formation-icone {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 13px;
+}
+
+.formation-icone img {
+  width: 29px;
+  height: 29px;
+}
+
+.formation-icone.bleu {
+  background: #dceeff;
+  color: #1674d0;
+}
+
+.formation-icone.vert {
+  background: #dcf5e5;
+  color: #188c4e;
+}
+
+.formation-icone.orange {
+  background: #fff0df;
+  color: #d88013;
+}
+
+.formation-icone.violet {
+  background: #f0e3ff;
+  color: #8342c3;
+}
+
+.formation-entete h3 {
+  color: var(--bleu-fonce);
+  font-size: 17px;
+  margin: 0 0 7px;
+}
+
+.formation-entete p {
+  color: var(--gris);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0 0 15px;
+}
+
+.formation-photo {
+  display: block;
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+/* 4. Bandeau de contact et pied de page */
+.contact {
+  background: #e5f2fc;
+  padding: 29px 0;
+}
+
+.contact-interieur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.contact h2 {
+  margin: 0 0 8px;
+  font-size: 21px;
+}
+
+.contact p {
+  color: #546a7c;
+  max-width: 760px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contact-lien {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+  border: 1px solid #86b5d8;
+  color: #194e77;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: default;
+}
+
+.contact-lien img {
+  width: 20px;
+}
+
+.pied {
+  background: var(--bleu-fonce);
+  color: #dceaf6;
+}
+
+.pied-interieur {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 22px 0;
+  font-size: 12px;
+}
+
+/* 5. Adaptation aux ecrans */
+@media (max-width: 980px) {
+  .grille-formations {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .formation-entete {
+    min-height: 120px;
+  }
+
+}
+
+@media (max-width: 640px) {
+  .conteneur {
+    width: min(100% - 28px, 1140px);
+  }
+
+  .entete-interieur, .contact-interieur, .pied-interieur {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation {
+    width: 100%;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .banniere {
+    min-height: 340px;
+  }
+
+  .banniere-filtre {
+    background: rgba(13,45,78,.81);
+  }
+
+  .banniere-contenu {
+    padding: 38px 0;
+  }
+
+  .banniere h1 {
+    font-size: 30px;
+  }
+
+  .grille-formations {
+    grid-template-columns: 1fr;
+  }
+
+  .formation-entete {
+    min-height: auto;
+  }
+
+  .titre-section h2 {
+    font-size: 24px;
+  }
+
+}

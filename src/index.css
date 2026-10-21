@@ -1,0 +1,16 @@
+/* Styles de base du projet - à conserver pour le TP */
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #19304d;
+  background-color: #f3f7fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+a { color: inherit; }
+button { font: inherit; }
+img { max-width: 100%; }
